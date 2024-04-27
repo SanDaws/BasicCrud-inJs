@@ -1,3 +1,5 @@
+let pets=[]
+
 //main menu ``
 function MainMenu() {
     let input= prompt(`bienvenido al menu, elija su opcion
@@ -10,13 +12,13 @@ function MainMenu() {
     switch (input) {
         case '1'://Create
         if(HumanOAnimalSelector()==0){// function returns:0, pet option
-            console.log('nas')
+            NewPet()
         }else{//function returns :1, owner option
-
+            NewOwner()
         }
         
         case '2'://read
-        case '1'://Create
+        
         if(HumanOAnimalSelector()==0){// function returns:0, pet option
             
         }else{//function returns :1, owner option
@@ -24,7 +26,7 @@ function MainMenu() {
         }
         break;
         case '3'://update
-        case '1'://Create
+        
         if(HumanOAnimalSelector()==0){// function returns:0, pet option
             
         }else{//function returns :1, owner option
@@ -32,16 +34,18 @@ function MainMenu() {
         }
         break;
         case '4'://Delete
-        case '1'://Create
+        
         if(HumanOAnimalSelector()==0){// function returns:0, pet option
             
         }else{//function returns :1, owner option
 
         }
         break;
+
         case 's'://exit
         return 0
         break;
+
         default:
             console.error('No opcion seleccionable')
             MainMenu()
@@ -68,14 +72,13 @@ function HumanOAnimalSelector() {
     1:Mascota
     2:Cliente
     b:atras`).toLowerCase()
-    /**/
     switch (selec) {
-        case '1': // case 
+        case '1': // pet 
             return 0
-            break;
+
         case '2'://owner
-        return 
-        break;
+        return  1
+
         case 'b':
             retunMenu()
         break;
@@ -87,7 +90,18 @@ function HumanOAnimalSelector() {
     
 }
 //Animal register CRUD
+// {name:String,specie:string,breed:string,b-day:Date,,condition:Boolean}
+//create
+function NewPet() {//creates a new object pet
+    //many animals can have same properties( you cant validate if exist bay traditional way)
+    //it will be a lot of prompts
+    
+}
+
 
 //Owner Register Crud
+function NewOwner() {
+    
+}
 
 MainMenu()
