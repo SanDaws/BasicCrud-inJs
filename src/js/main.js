@@ -123,6 +123,7 @@ function createOwner(identification,petId) {
         }
     
     }
+    identification=parseInt(identification)
 
     let name=prompt('Nombre del dueño')
     let phone=prompt('Telefono del dueño')
