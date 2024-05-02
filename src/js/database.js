@@ -4,4 +4,5 @@ let pets = [{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pasto
 
 //{ownerName:string,Id:Number,phone:string,email:string, pets:[petId]}
 let owners=[{ id: 1007226999, name: "Santiago Castro", phone: "3224495321", email: "sacastro@unal.edu.co", pets:[4202440,4202441] },
+
 ]

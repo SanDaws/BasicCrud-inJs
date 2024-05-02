@@ -1,5 +1,3 @@
-//owners=[{owner}]
-
 //constructor functions
 //{ownerName:string,Id:Number,phone:string,email:string, pets:[petId]}
 export function Owner(id,name,phone,email,pets) {
@@ -62,12 +60,14 @@ export function createOwner(identification,petId) {
     alert('Registro Satisfactorio')
 }
 
+//printing template
 
 
 //read: list
 //Object { id: "1007226999", name: "Santiago Castro", phone: "3224495321", email: "sacastro@unal.edu.co", pets: (1) […] }
+
 export function readOwners() {
     owners.forEach(owner => {
-        console.log(owner)
+        console.log(owner) // REDO function to doit whit html, add template function
     });
 }
