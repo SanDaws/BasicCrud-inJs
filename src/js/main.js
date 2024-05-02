@@ -1,8 +1,6 @@
-import  "./owners"
-import "./pets"
 //owners=[{owner}]
-owners=[{ id: 1007226999, name: "Santiago Castro", phone: "3224495321", email: "sacastro@unal.edu.co", pets:[4202440] }]
-pets=[{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pastor belga", weight: 25, condition: true, bdayDate: Date ('Sun Feb 23 2020 00:00:00 GMT-0500 (Colombia Standard Time'), age: 4, owners: 1007226999 }]
+let owners=[{ id: 1007226999, name: "Santiago Castro", phone: "3224495321", email: "sacastro@unal.edu.co", pets:[4202440] }]
+let pets=[{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pastor belga", weight: 25, condition: true, bdayDate: Date ('Sun Feb 23 2020 00:00:00 GMT-0500 (Colombia Standard Time'), age: 4, owners: 1007226999 }]
 //constructor functions
 //{ownerName:string,Id:Number,phone:string,email:string, pets:[petId]}
 function Owner(id,name,phone,email,pets) {
