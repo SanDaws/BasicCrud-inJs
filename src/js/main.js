@@ -1,11 +1,11 @@
 //owners=[{owner}]
-owners=[]
-pets=[]
+owners=[{ id: 1007226999, name: "Santiago Castro", phone: "3224495321", email: "sacastro@unal.edu.co", pets:[] }]
+pets=[{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pastor belga", weight: 25, condition: true, bdayDate: Date ('Sun Feb 23 2020 00:00:00 GMT-0500 (Colombia Standard Time'), age: 4, owners: 1007226999 }]
 //constructor functions
 //{ownerName:string,Id:Number,phone:string,email:string, pets:[petId]}
 function Owner(id,name,phone,email,pets) {
     this.id=id
-    this.name=name
+    this.name=name //change for name and lastname
     this.phone=phone
     this.email=email
     this.pets=pets
@@ -93,7 +93,7 @@ function ownerValidator(petId) { // returs id or a the creation of a new owner
     let indexowner=owners.findIndex(owner => owner.Id === ownerId);
     if (indexowner==-1) {//doesn't exist owner yet
         alert('se necesita registrar')
-        createOwner(0,petId)
+        createOwner(ownerId,petId)
         return ownerId
     }else{//alredy existing owner
         return ownerId
@@ -147,7 +147,7 @@ function createPet() {
     let weight=weightValidation()
     let condition=conditionStrtoBool() 
     let bday=new Date(prompt('Fecha de naciemiento (formato: AAAA/MM/DD) ','AAAA/MM/DD'))
-    let owner =ownerValidator(petId)
+    let owner =ownerValidator(id)
     
     let pet= new Pet(id,petName,specie,breed,weight,condition,bday,owner)
     
@@ -155,10 +155,29 @@ function createPet() {
     alert('Cliente Creado satisfactoriamente')
 }
 
+//read: list
+//Object { id: "1007226999", name: "Santiago Castro", phone: "3224495321", email: "sacastro@unal.edu.co", pets: (1) […] }
+function readOwners() {
+    owners.forEach(owner => {
+        console.log(owner)
+    });
+}
+
+function readPets() {
+    pets.forEach(pet => {
+        console.log(pet)
+    });
+    
+}
 
 
 //templates
-
+//template to return main Menu
+function retunMenu() {// only restart all the 
+    console.error('Volviendo Al menu principal')
+    MainMenu()
+    
+}
 
 
 //Main Menu
@@ -181,9 +200,9 @@ function MainMenu() {
         case '2'://read
         
         if(HumanOAnimalSelector('Listar')==0){// function returns:0, pet option
-            listPets()
+            readPets()
         }else{//function returns :1, owner option
-            listOwners()
+            readOwners()
         }
         break;
 
