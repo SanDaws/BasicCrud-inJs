@@ -74,13 +74,32 @@ export function createPet() {
 
 
 //read pets
+//template for read:
+//{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pastor belga", weight: 25, condition: true, bdayDate: Date('Sun Feb 23 2020 00:00:00 GMT-0500 (Colombia Standard Time'), age: 4, owners: 1007226999 }
+function template(pet) {
+    
+    return `id: 
+    Nombre specie raza 
+    condicion
+    fecha de nacimiento: / /
+    edad
+    `
 
-export function readPets() {
-    pets.forEach(pet => {
-        console.log(pet)
+    
+}
+//listing pets
+export function readPets(petArr) {
+    petArr.forEach(pet => {
+        console.log(template(pet))// redo whit template
     });
 
 }
 
-//updating pets
+//searchig pets
+// by name : supossing lot of pets can be named the same
+export function searchPetByName() {
+    let petName = prompt('Nombre de la mascota')
+    let arrPetFiltered= pets.filter(pet=>pet.petName===petName)
+    return arrPetFiltered
+}
 

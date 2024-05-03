@@ -56,7 +56,7 @@ function MainMenu() {
         case '2'://read
         
         if(HumanOAnimalSelector('Listar')==0){// function returns:0, pet option
-            pet.readPets()
+            pet.readPets(pets)
         }else{//function returns :1, owner option
             owner.readOwners()
         }

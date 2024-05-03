@@ -71,3 +71,8 @@ export function readOwners() {
         console.log(owner) // REDO function to doit whit html, add template function
     });
 }
+
+// update
+//by name
+//by id
+
