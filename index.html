@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#inicio">Veterinaria</a>
+                <h1><a class="navbar-brand" href="#inicio">Veterinaria</a></h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -47,7 +47,9 @@
     </header>
     <main>
         <section id="inicio"></section>
-        <section id="busqueda">
+        
+        <section id="all-pets">
+            <h2>Mascotas que hemos atendido</h2>
             <!-- todo este id se debera imprimir multiples veces -->
             <div class="card" style="width: 18rem;"> 
                 <!-- para img usaremos el nombre del archivo -->
@@ -69,6 +71,7 @@
         </section>
         <!-- seccion de busqueda dueño -->
         <section id="ownerList">
+            <h2>Nuestros clientes</h2>
             <!-- por cada deuño se reimprime este formato -->
         <div class="card border-dark mb-3" style="max-width: 18rem;">
             <div class="card-header">Header</div>
@@ -77,6 +80,28 @@
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
             </div>
+        </section>
+        <section class="d-flex">
+            <!-- formulario de registro nueva mascota y dueño -->
+            <section id="owner">
+                <h3>Dueño:</h3>
+                <form action="" method="post">
+
+                </form>
+            </section>
+            <section id="pet">
+                <h3>Mascota:</h3>
+                <form action="">
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+    
+                </form>
+            </section>
+           
         </section>
     </main>
     <!-- footer -->
