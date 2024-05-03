@@ -94,4 +94,3 @@ function MainMenu() {
 }
 
 // Execution
-MainMenu()

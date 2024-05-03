@@ -78,14 +78,13 @@ export function createPet() {
 //{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pastor belga", weight: 25, condition: true, bdayDate: Date('Sun Feb 23 2020 00:00:00 GMT-0500 (Colombia Standard Time'), age: 4, owners: 1007226999 }
 function template(pet) {
     
-    return `id: 
-    Nombre specie raza 
-    condicion
-    fecha de nacimiento: / /
-    edad
-    `
-
-    
+    return `id: ${pet.petId}
+    Nombre ${pet.petName} specie ${pet} raza  ${pet}
+    condicion ${pet}
+    fecha de nacimiento: ${pet.bdayDate.getDay()}/${pet.bdayDate.getMonth()} /${pet.bdayDate.getFullYear()}
+    edad ${age(pet.bdayDate)}
+    dueño${pet.owner}
+    `    
 }
 //listing pets
 export function readPets(petArr) {
@@ -100,6 +99,8 @@ export function readPets(petArr) {
 export function searchPetByName() {
     let petName = prompt('Nombre de la mascota')
     let arrPetFiltered= pets.filter(pet=>pet.petName===petName)
-    return arrPetFiltered
+    arrPetFiltered.forEach(petFiltered => {
+        console.log(template(petFiltered))
+    });
 }
 
