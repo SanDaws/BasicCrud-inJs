@@ -1,7 +1,7 @@
 import * as own from "./owners.js"
 
 
-export function Pet(petId, petName, specie, breed, weight, condition, bdayDate, owner) {
+export function Pet(petId, petName, specie, breed, weight, condition, bdayDate, owner, imgLink) {
     this.petId = petId
     this.petName = petName
     this.specie = specie
@@ -11,6 +11,7 @@ export function Pet(petId, petName, specie, breed, weight, condition, bdayDate, 
     this.bdayDate = bdayDate
     this.age = age(this.bdayDate)
     this.owners = owner// for now on we are going to use only one owner, later we will use a set or an array
+    this.imgLink= imgLink
 }
 
 //calculation
@@ -65,8 +66,9 @@ export function createPet() {
     let condition = conditionStrtoBool()
     let bday = new Date(prompt('Fecha de naciemiento (formato: AAAA/MM/DD) ', 'AAAA/MM/DD'))
     let owner = own.ownerValidator(id)
+    let img= prompt('Url de foto de la mascota')// Featurae that might be changed for a uploading of a real photo
 
-    let pet = new Pet(id, petName, specie, breed, weight, condition, bday, owner)
+    let pet = new Pet(id, petName, specie, breed, weight, condition, bday, owner,img)
 
     pets.push(pet)
     alert('Cliente Creado satisfactoriamente')
@@ -74,17 +76,36 @@ export function createPet() {
 
 
 //read pets
+function imgLinkValidator(img) {
+    if (img=='' || img== undefined) {
+        return 'https://img.freepik.com/vector-premium/icono-marco-fotos-foto-vacia-blanco-vector-sobre-fondo-transparente-aislado-eps-10_399089-1290.jpg'
+    }else{
+        return img
+    }
+    
+}
 //template for read:
 //{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pastor belga", weight: 25, condition: true, bdayDate: Date('Sun Feb 23 2020 00:00:00 GMT-0500 (Colombia Standard Time'), age: 4, owners: 1007226999 }
-function template(pet) {
+export function template(pet) {
     
-    return `id: ${pet.petId}
-    Nombre ${pet.petName} specie ${pet} raza  ${pet}
-    condicion ${pet}
-    fecha de nacimiento: ${pet.bdayDate.getDay()}/${pet.bdayDate.getMonth()} /${pet.bdayDate.getFullYear()}
-    edad ${age(pet.bdayDate)}
-    dueño${pet.owner}
-    `    
+    return `<div class="card p-2 " style="width: 18rem;"> 
+    <!-- para img usaremos el nombre del archivo -->
+    <img src="${imgLinkValidator(pet.imgLink)}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <p class="card-text">${pet.petId}</p>
+        <h5 class="card-title text-capitalize">${pet.petName}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item text-capitalize">Especie: ${pet.specie}</li>
+        <li class="list-group-item text-capitalize">raza: ${pet.breed}</li>
+        <li class="list-group-item text-capitalize">estado: ${conditionBooltoStr(pet.condition)}</li>
+    </ul>
+    <div class="card-body">
+        <a href="#${pet.owner}" class="card-link"> Owner ${pet.owner}</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+</div>
+    `
 }
 //listing pets
 export function readPets(petArr) {

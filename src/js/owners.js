@@ -60,19 +60,33 @@ export function createOwner(identification,petId) {
     alert('Registro Satisfactorio')
 }
 
-//printing template
-
-
 //read: list
-//Object { id: "1007226999", name: "Santiago Castro", phone: "3224495321", email: "sacastro@unal.edu.co", pets: (1) […] }
+//printing template
+export function template(owner) { // REDO function to doit whit html
+    
+    return `
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">${owner.id}</div>
+    <div class="card-body">
+        <h5 class="card-title text-capitalize">${owner.name}</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Telefono: <a href="tel:+${owner.phone}">${owner.phone}</a></li>
+            <li class="list-group-item">Email: <a href="mailto:${owner.email}">${owner.email}</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+    `
+}
+
+
+//Object { id: "1007226999", name: "Santiago Castro", phone: "3224495321", email: "sacastro@unal.edu.co", pets:[pet.id] }
 
 export function readOwners() {
     owners.forEach(owner => {
-        console.log(owner) // REDO function to doit whit html, add template function
+        console.log(template(owner)) // use to print
     });
 }
 
-// update
-//by name
-//by id
-
+//update

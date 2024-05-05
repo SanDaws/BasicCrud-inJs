@@ -25,19 +25,22 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Mascotas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registro</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
+                        Registrar
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Cliente</a></li>
+                        <li><a class="dropdown-item" href="#">Mascota</a></li>
+                        <li><a class="dropdown-item" href="#">a</a></li>
                         </ul>
                     </li>
                     </ul>
@@ -46,40 +49,33 @@
         </nav>
     </header>
     <main>
-        <section id="inicio"></section>
-        
-        <section id="all-pets">
-            <h2>Mascotas que hemos atendido</h2>
-            <!-- todo este id se debera imprimir multiples veces -->
-            <div class="card" style="width: 18rem;"> 
-                <!-- para img usaremos el nombre del archivo -->
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
+        <section id="inicio">
+            
         </section>
+
+
+        <!-- show all the pets -->
+        <section>
+            <h2>Mascotas que hemos atendido</h2>
+            <section id="buscador">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </section>
+            <article id="all-pets" class="d-sm-flex flex-wrap justify-content-evenly">
+            
+            </article>
+        </section>
+        
         <!-- seccion de busqueda dueño -->
         <section id="ownerList">
             <h2>Nuestros clientes</h2>
             <!-- por cada deuño se reimprime este formato -->
-        <div class="card border-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            </div>
+            <article id="all-owners" class="d-sm-flex flex-wrap justify-content-evenly">
+                <!-- space for all the owners cards -->
+            </article>
+        
         </section>
         <section class="d-flex">
             <!-- formulario de registro nueva mascota y dueño -->
@@ -101,7 +97,6 @@
     
                 </form>
             </section>
-           
         </section>
     </main>
     <!-- footer -->
@@ -110,7 +105,7 @@
             <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
             <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
             </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Veterinaria, Inc</span>
         </div>
     
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
