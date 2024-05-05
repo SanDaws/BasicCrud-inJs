@@ -90,7 +90,7 @@ export function template(pet) {
     
     return `<div class="card p-2 " style="width: 18rem;"> 
     <!-- para img usaremos el nombre del archivo -->
-    <img src="${imgLinkValidator(pet.imgLink)}" class="card-img-top" alt="...">
+    <img src="${imgLinkValidator(pet.imgLink)}" class="card-img-top h-50" alt="...">
     <div class="card-body">
         <p class="card-text">${pet.petId}</p>
         <h5 class="card-title text-capitalize">${pet.petName}</h5>

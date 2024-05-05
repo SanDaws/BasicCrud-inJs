@@ -1,6 +1,6 @@
 
 let pets = [
-{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pastor belga", weight: 25, condition: true, bdayDate: Date('Sun Feb 23 2020 00:00:00 GMT-0500 (Colombia Standard Time'), age: 4, owners: 1007226999, imgLink: 'https://img.freepik.com/vector-premium/icono-marco-fotos-foto-vacia-blanco-vector-sobre-fondo-transparente-aislado-eps-10_399089-1290.jpg' },
+{ petId: 4202440, petName: "lamela", specie: "canino", breed: "pastor belga", weight: 25, condition: true, bdayDate: Date('Sun Feb 23 2020 00:00:00 GMT-0500 (Colombia Standard Time'), age: 4, owners: 1007226999, imgLink: '../../public/img/lamela.webp'},
 { petId: 4202441, petName: "arturo", specie: "ave", breed: "perico australiano", weight: 5, condition: true, bdayDate: Date('Tue May 30 2023 00:00:00 GMT-0500 (Colombia Standard Time)'), age: 0, owners: 1007226999, imgLink: 'https://img.freepik.com/vector-premium/icono-marco-fotos-foto-vacia-blanco-vector-sobre-fondo-transparente-aislado-eps-10_399089-1290.jpg' },
 { petId: 4202442, petName: "alaska", specie: "felino", breed: "criollo", weight: 10, condition: false, bdayDate: Date(), age: 9, owners: 1046545548 , imgLink:'https://www.mirringo.com.co/Portals/mirringo/articulos-mirringo-panama/que-significa-los-colores-de-los-gatos/GATO-Blanco-y-negro-min.jpg?ver=2023-02-20-171503-600'},
 { petId: 4202443, petName:  "polaco", specie: "felino", breed: "criollo" , weight: 7, condition: true , bdayDate: Date(), age:12, owners: 1046545548  ,imgLink:''  },

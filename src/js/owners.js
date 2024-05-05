@@ -65,7 +65,7 @@ export function createOwner(identification,petId) {
 export function template(owner) { // REDO function to doit whit html
     
     return `
-    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card border-dark mb-3 col " style="max-width: 18rem;">
     <div class="card-header">${owner.id}</div>
     <div class="card-body">
         <h5 class="card-title text-capitalize">${owner.name}</h5>

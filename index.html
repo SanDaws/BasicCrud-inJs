@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"  content="descripcion del proyecto" />
+    <meta name="keywords"
+        content="animals, veterinaria, salud,">
+    <meta name="sitedomain" content="https://riwi.io">
+    <meta name="organization" content="Riwi_DEll">
+    <meta name="author" content="Santiago Castro Giraldo">
+    <meta name="designer" content="Santiago Castro Giraldo">
+    <meta name="copyright" content="© 2024 Riwi. All rights reserved">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="15days">
 
     <!-- style -->
     <!-- bootstrap -->
@@ -13,7 +24,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
             <div class="container-fluid">
                 <h1><a class="navbar-brand" href="#inicio">Veterinaria</a></h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,24 +36,15 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mascotas</a>
+                        <a class="nav-link" href="#sect-all-pets">Mascotas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Clientes</a>
+                        <a class="nav-link" href="#ownerList">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Registro</a>
+                        <a class="nav-link" href="#register">Registro</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Registrar
-                        </a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Cliente</a></li>
-                        <li><a class="dropdown-item" href="#">Mascota</a></li>
-                        <li><a class="dropdown-item" href="#">a</a></li>
-                        </ul>
-                    </li>
+                    
                     </ul>
                 </div>
             </div>
@@ -50,52 +52,108 @@
     </header>
     <main>
         <section id="inicio">
+            <figure>
+                <img src="" alt="">
+            </figure>
             
         </section>
 
 
         <!-- show all the pets -->
-        <section>
+        <section id="sect-all-pets">
             <h2>Mascotas que hemos atendido</h2>
-            <section id="buscador">
+            <section id="buscador" class="w-50 mx-auto p-2">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </section>
+            <br>
             <article id="all-pets" class="d-sm-flex flex-wrap justify-content-evenly">
-            
+                <!-- all the pets are printed here -->
+                <!-- search for ways to overflow alla this elements -->
             </article>
         </section>
         
         <!-- seccion de busqueda dueño -->
         <section id="ownerList">
             <h2>Nuestros clientes</h2>
-            <!-- por cada deuño se reimprime este formato -->
+            <section id="buscador" class="w-50 mx-auto p-2">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </section>
+            <br>
             <article id="all-owners" class="d-sm-flex flex-wrap justify-content-evenly">
                 <!-- space for all the owners cards -->
             </article>
         
         </section>
-        <section class="d-flex">
-            <!-- formulario de registro nueva mascota y dueño -->
+        <section id="register" class="d-flex flex-wrap justify-content-evenly">
+            <h2 class="w-100">Registrar:</h2>
+            <!--form for a new owner and pet -->
             <section id="owner">
-                <h3>Dueño:</h3>
-                <form action="" method="post">
+                
+                <form action="" method="post" >
+                    <legend>Dueño</legend>
+                    <label for="name form-control " class="form-label">Nombre</label>
+                    <input class="name form-control " type="text" placeholder="Nombre" aria-label="default input example" required>
+                    <label for="tel form-control " class="form-label">Telefono</label>
+                    <input class="tel form-control "  type="tel" placeholder="Telefono" aria-label="default input example" required>
+                    <label for="email form-control " class="form-label">Correo</label>
+                    <input class="email form-control "  type="email" placeholder="email" aria-label="default input example" required>
+                    <label for="document form-control " class="form-label">Nombre</label>
+                    <input class="document form-control "  type="text" placeholder="Documento" aria-label="default input example" required>
+
+
 
                 </form>
             </section>
-            <section id="pet">
-                <h3>Mascota:</h3>
-                <form action="">
+
+            <!-- pet data -->
+            <section id="pet" class="grid">
+                    
+                <form action="row g-3 needs-validation" class="wx-50">
+                    <legend>Mascotas</legend>
+                    <div class="col-md-4">
+                        <label for="name form-control " class="form-label">Nombre</label>
+                        <input class="name form-control " type="text" placeholder="Nombre" aria-label="default input example" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="peso form-control " class="form-label">peso (en Kg)</label>
+                        <input class="peso form-control " type="text" placeholder="Kg" aria-label="default input example" required>
+                    </div>
+
+                    <label for="specie form-control " class="form-label">Especie</label>
+                    <input class="specie form-control " type="text" placeholder="Canino, felino , ave ..." aria-label="default input example" required>
+
+                    <label for="race form-control " class="form-label">Raza</label>
+                    <input class="race form-control " type="text" placeholder="Raza" aria-label="default input example" required>
+
+                    <label for="race form-control " class="form-label">Fecha de nacimiento</label>
+                    <input class="race form-control " type="date" placeholder="Raza" aria-label="default input example" required>
+
+                    <label for="form-select form-select-sm" class="form-label">Esado actual</label>
                     <select class="form-select form-select-sm" aria-label="Small select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <option selected >Estado</option>
+                    <option value='estable'>estable</option>
+                    <option value="critico">Critico</option>
                     </select>
-    
+
+
+                    <div class="mb-3">
+                    <label for="formFile" class="form-label">Foto </label>
+                    <input class="form-control" type="file" id="formFile">
+                    </div>
+
+
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Registrar</button>
+                    </div>
+                    
                 </form>
+
             </section>
         </section>
     </main>
